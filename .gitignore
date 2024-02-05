@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.iml
 .gradle
 /local.properties
@@ -13,3 +14,8 @@
 .externalNativeBuild
 .cxx
 local.properties
+=======
+# Default ignored files
+/shelf/
+/workspace.xml
+>>>>>>> dd92028fb24c1df782777d5f1fee0494d74a087f

@@ -1,3 +1,4 @@
+/*
 package com.example.greenkim.api.member
 
 import com.example.greenkim.api.auth.AuthApiService
@@ -42,4 +43,4 @@ interface MemberApiService {
 
         }
     }
-}
+}*/

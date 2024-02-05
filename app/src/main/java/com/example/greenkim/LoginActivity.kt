@@ -16,6 +16,7 @@ import com.example.greenkim.api.auth.DTO.Login.LoginResponseDto
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.create
 
 class LoginActivity : AppCompatActivity() {
 

@@ -8,16 +8,17 @@ import android.widget.Toast
 import com.example.greenkim.api.auth.App
 import com.example.greenkim.api.auth.AuthApiService
 import com.example.greenkim.api.member.DTO.profile.AllSettingResponseDto
-import com.example.greenkim.api.member.MemberApiService
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
+//임시 설정 GET 정보 가져오는 곳
 class setgetActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setget)
+        Toast.makeText(this, App.prefs.token,Toast.LENGTH_SHORT).show()
         val t = findViewById<TextView>(R.id.text1)
         fun getSet() {
             val settingService = AuthApiService.create()

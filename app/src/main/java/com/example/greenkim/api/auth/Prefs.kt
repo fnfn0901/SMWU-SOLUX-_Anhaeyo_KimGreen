@@ -7,9 +7,9 @@ class Prefs(context: Context) {
     private val prefName = "tokenPref"
     private val prefs = context.getSharedPreferences(prefName,MODE_PRIVATE)
     var token:String?
-        get() = prefs.getString("token",null)
+        get() = prefs.getString("",null)
         set(value) {
-            prefs.edit().putString("token",value).apply()
+            prefs.edit().putString("",value).commit()
         }
 
 }
