@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/selector_home_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/action_community"
+        android:icon="@drawable/selector_community_24"
+        android:title="Community" />
+    <item
+        android:id="@+id/action_my_page"
+        android:icon="@drawable/selector_my_page_24"
+        android:title="MyPage" />
+</menu>
