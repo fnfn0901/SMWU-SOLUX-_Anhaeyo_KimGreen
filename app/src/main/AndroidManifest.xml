@@ -25,15 +25,13 @@
         android:theme="@style/Theme.GreenKim"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity android:name=".BadgeActivity"
+            android:exported="true"/>
         <activity
             android:name=".SettingActivity"
-            android:exported="false" />
-        <!-- 여기서부터는 중복된 activity 태그를 삭제하세요. -->
+            android:exported="true" />
         <activity
             android:name=".CalendarDayItem"
-            android:exported="true" /> <!-- 중복된 activity 태그 삭제 -->
-        <activity
-            android:name=".MainActivity2"
             android:exported="true" />
         <activity
             android:name=".PopupActivity"
