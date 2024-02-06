@@ -24,9 +24,9 @@ class SplashActivity : AppCompatActivity() {
                 .start()
         }, SPLASH_DELAY)
 
-        // 메인 액티비티로 이동
+        // 튜토리얼 액티비티로 이동
         Handler().postDelayed({
-            val mainIntent = Intent(this@SplashActivity, MainActivity::class.java)
+            val mainIntent = Intent(this@SplashActivity, TutorialActivity::class.java)
             startActivity(mainIntent)
             finish()
         }, SPLASH_DELAY + 3000) // 이미지 나타나는 시간을 추가하여 메인 액티비티로 이동
