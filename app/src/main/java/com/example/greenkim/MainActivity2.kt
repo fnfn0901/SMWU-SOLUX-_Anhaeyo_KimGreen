@@ -43,7 +43,7 @@ class MainActivity2 : AppCompatActivity() {
 
         override fun createFragment(position: Int): Fragment {
             return when (position) {
-                0 -> ConfirmationFragment()
+//                0 -> HomeFragment()
                 1 -> CommunityFragment()
                 else -> SettingFragment()
             }

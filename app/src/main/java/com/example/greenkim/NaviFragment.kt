@@ -135,9 +135,10 @@ class NaviFragment : Fragment() {
 
                         ) {
                             composable("Home") {}
-                            composable("Community") {
+                            composable("Community") {}
+                            composable("MyPage") { val intent = Intent(context, SettingActivity::class.java)
+                                ContextCompat.startActivity(context, intent, null)
                             }
-                            composable("MyPage") { }
                         }
 
                     }

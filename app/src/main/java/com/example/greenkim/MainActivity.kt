@@ -53,7 +53,6 @@ import androidx.compose.ui.text.font.FontWeight.Companion.Thin
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
@@ -84,7 +83,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Column() {
+    Column(modifier = Modifier.background(Color.White)) {
         TopMainScreen()
         Spacer(modifier = modifier.size(20.dp))
         CommunitySection()
@@ -123,7 +122,7 @@ fun bottomApp() {
     }
     val navController = rememberNavController()
     Scaffold(
-        //containerColor = Color.White,
+        containerColor = Color.White,
         bottomBar = {
             NavigationBar {
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
@@ -170,9 +169,8 @@ fun bottomApp() {
             Modifier.padding(innerPadding)
 
         ) {
-            composable("Home") {}
-            composable("Community") { val intent = Intent(context, CommunityActivity::class.java)
-                startActivity(context, intent, null) }
+            composable("Home") { }
+            composable("Community") {  }
             composable("MyPage") { }
         }
 
@@ -271,7 +269,7 @@ fun ZeroTodoSection() {
     Column(
         Modifier
             .fillMaxWidth()
-
+            .background(Color.White)
     ) {
         Spacer(modifier = Modifier.size(15.dp))
         Row {
