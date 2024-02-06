@@ -10,6 +10,8 @@ import android.view.View
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.greenkim.databinding.ActivitySettingBinding
 import com.google.android.material.card.MaterialCardView
 import com.kizitonwose.calendar.core.CalendarDay
@@ -37,16 +39,6 @@ class SettingActivity : AppCompatActivity() {
                 Log.d("SettingActivity", "미디어가 선택되지 않았습니다.")
             }
         }
-
-    private val badgeList by lazy {
-        listOf(
-            BadgeList.ADVENTURER.apply { isProfileBadge = true },
-            BadgeList.MENTEE.apply { isProfileBadge = true },
-            BadgeList.PLASTIC_3.apply { isProfileBadge = true },
-            BadgeList.GOLDEN_KIMGREEN.apply { isProfileBadge = true },
-            BadgeList.YEONDU.apply { isProfileBadge = true },
-        )
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -103,6 +95,12 @@ class SettingActivity : AppCompatActivity() {
             val intent = Intent(this@SettingActivity, BadgeActivity::class.java)
             startActivity(intent)
         }
+
+//        // RecyclerView 초기화 및 설정
+//        val profileBadgeRecyclerView: RecyclerView = findViewById(R.id.profile_badge_recycler_view)
+//        profileBadgeRecyclerView.layoutManager = GridLayoutManager(this@SettingActivity, 5)
+//        val profileBadgeAdapter = BadgeAdapter(badgeList, {}, {})
+//        profileBadgeRecyclerView.adapter = profileBadgeAdapter
     }
 
     private fun showImageSourceDialog() {

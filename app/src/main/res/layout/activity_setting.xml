@@ -100,9 +100,8 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/profile_badge_recycler_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
                 <ImageView
                     android:id="@+id/question_button"
