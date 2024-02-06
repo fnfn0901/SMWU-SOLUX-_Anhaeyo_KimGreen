@@ -50,7 +50,7 @@ class CommunityFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val postList = getPosts()
-        val adapter = PostsAdapter()
+        val adapter = PostsAdapter(requireContext())
         adapter.listData = postList
         adapter.onPostItemClickListener = object : PostsAdapter.OnPostItemClickListener {
             override fun onPostItemClick(post: posts) {
@@ -64,6 +64,7 @@ class CommunityFragment : Fragment() {
 
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

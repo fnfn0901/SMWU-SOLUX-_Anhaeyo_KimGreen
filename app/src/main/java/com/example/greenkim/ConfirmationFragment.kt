@@ -39,21 +39,17 @@ class ConfirmationFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val postList = getPosts()
-        val adapter = PostsAdapter()
+        val adapter = PostsAdapter(requireContext())
         adapter.listData = postList
-
         adapter.onPostItemClickListener = object : PostsAdapter.OnPostItemClickListener {
             override fun onPostItemClick(post: posts) {
-                // Open DetailPostActivity when a post is clicked
                 val intent = Intent(requireContext(), DetailPostActivity::class.java)
-                intent.putExtra("selectedPost", post)
+                intent.putExtra("postId", post.no)
                 startActivity(intent)
             }
         }
-
-        binding.recyclerview.adapter =adapter
+        binding.recyclerview.adapter = adapter
         binding.recyclerview.layoutManager = LinearLayoutManager(context)
 
         return binding.root

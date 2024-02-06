@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp">
 
     <com.google.android.material.card.MaterialCardView
@@ -18,14 +17,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="4dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/profile_pic"
@@ -39,21 +38,28 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lineseed_kor_bold"
                     android:text="얼리버드 김땡땡"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/commenter_date"
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
-                    android:text="1월 25일 14:36"
-                    android:layout_marginLeft="3dp"/>
+                    android:layout_marginLeft="3dp"
+                    android:text="1월 25일 14:36" />
 
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
-<!--                <include layout="activity_popup"/>-->
+                <ImageView
+                    android:id="@+id/overflow_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    android:src="@drawable/baseline_more_vert_24" />
 
             </LinearLayout>
 
@@ -66,21 +72,21 @@
                     android:id="@+id/contents"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="5dp"
                     android:text="나는 문어. 꿈을 꾸는 문어. 안녕하세요 영화배우 이정재입니다제가 사랑하는 도시, 부산에 초대합니다"
-                    android:textSize="20sp"
-                    android:layout_margin="5dp"/>
+                    android:textSize="20sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="right">
+                    android:gravity="right"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:id="@+id/Like"
                         android:layout_width="45dp"
                         android:layout_height="38dp"
-                        android:src="@drawable/baseline_favorite_24"/>
+                        android:src="@drawable/baseline_favorite_24" />
 
                     <TextView
                         android:id="@+id/like_counts"
@@ -93,15 +99,15 @@
                         android:id="@+id/Chat"
                         android:layout_width="45dp"
                         android:layout_height="38dp"
-                        android:src="@drawable/baseline_chat_24"/>
+                        android:src="@drawable/baseline_chat_24" />
 
                     <TextView
                         android:id="@+id/chat_counts"
                         android:layout_width="40dp"
                         android:layout_height="38dp"
+                        android:layout_marginRight="5dp"
                         android:text="[   ]"
-                        android:textSize="25sp"
-                        android:layout_marginRight="5dp"/>
+                        android:textSize="25sp" />
 
                 </LinearLayout>
 

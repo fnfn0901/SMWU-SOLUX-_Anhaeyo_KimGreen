@@ -1,17 +1,20 @@
 package com.example.greenkim
 
 import android.animation.ObjectAnimator
+import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.animation.AccelerateInterpolator
+import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.greenkim.R
 import com.example.greenkim.databinding.RecyclerviewItemBinding
 import com.example.greenkim.posts
 
-class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
+class PostsAdapter(private val context: Context) : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
 
     var listData = mutableListOf<posts>()
     var onPostItemClickListener: OnPostItemClickListener? = null
@@ -104,6 +107,11 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
                 // likeCounts 갱신
                 binding.likeCounts.text = "${post.likeCounts}"
             }
+
+            binding.overflowButton.setOnClickListener {
+                showReportReasonDialog(context)
+            }
+
         }
         private fun updateLikeImage(liked: Boolean) {
             // 좋아요 상태에 따라 이미지 변경
@@ -136,4 +144,17 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
     interface OnPostItemClickListener {
         fun onPostItemClick(post: posts)
     }
+
+    private fun showReportReasonDialog(context: Context) {
+        val reasons = arrayOf("거짓 정보", "상업 광고", "폭력성/음란성", "기타")
+        val builder = AlertDialog.Builder(context)
+            .setTitle("신고 사유 선택")
+            .setItems(reasons) { dialog, which ->
+                val selectedReason = reasons[which]
+                dialog.dismiss()
+            }
+
+        builder.show()
+    }
+
 }
