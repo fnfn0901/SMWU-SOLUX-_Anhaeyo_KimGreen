@@ -36,11 +36,6 @@ class CommunityActivity : AppCompatActivity() {
                 "ProofFragment" -> binding.viewPager.currentItem = 2
             }
         }
-
-        val naviFragment = NaviFragment()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, naviFragment)
-            .commit()
     }
 
     fun updateLanguageButtonColor(languageButton: ImageButton) {

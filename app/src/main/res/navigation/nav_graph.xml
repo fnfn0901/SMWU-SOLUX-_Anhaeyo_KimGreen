@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/naviFragment">
+
+    <fragment
+        android:id="@+id/naviFragment"
+        android:name="com.example.greenkim.NaviFragment"
+        android:label="NaviFragment">
+
+        <action
+            android:id="@+id/action_naviFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+
+        <action
+            android:id="@+id/action_naviFragment_to_communityActivity"
+            app:destination="@id/communityActivity" />
+
+        <action
+            android:id="@+id/action_naviFragment_to_settingActivity"
+            app:destination="@id/settingActivity" />
+
+    </fragment>
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.greenkim.MainActivity"
+        android:label="MainActivity" />
+
+    <activity
+        android:id="@+id/communityActivity"
+        android:name="com.example.greenkim.CommunityActivity"
+        android:label="CommunityActivity" />
+
+    <activity
+        android:id="@+id/settingActivity"
+        android:name="com.example.greenkim.SettingActivity"
+        android:label="SettingActivity" />
+
+</navigation>
