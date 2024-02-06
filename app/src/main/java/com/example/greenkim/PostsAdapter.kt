@@ -78,6 +78,7 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
         fun setPost(post: posts) {
             binding.nickName.text = "아기자기"
             binding.chatCounts.text = "${post.no}"
+            binding.likeCounts.text = "${post.likeCounts}"
 
             // 좋아요 버튼 클릭 이벤트 처리
             binding.Like.setOnClickListener {
