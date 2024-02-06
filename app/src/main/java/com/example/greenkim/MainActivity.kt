@@ -114,7 +114,7 @@ fun bottomApp() {
             title = "MyPage",
             selectedIcon = Icons.Filled.AccountCircle,
             unselectedIcon = Icons.Outlined.AccountCircle,
-            hasNews = true,
+            hasNews = false,
         ),
     )
     var selectedItemIndex by rememberSaveable {
@@ -132,12 +132,16 @@ fun bottomApp() {
                         selected = selectedItemIndex == index,
                         onClick = {
                             selectedItemIndex = index
-                            navController.navigate(item.title) {
-                                popUpTo(navController.graph.findStartDestination().id) {
-                                    saveState = true
+                            when (item.title) {
+                                "Home" -> navController.navigate("Home")
+                                "Community" -> {
+                                    val intent = Intent(context, CommunityActivity::class.java)
+                                    context.startActivity(intent)
                                 }
-                                launchSingleTop = true
-                                restoreState = true
+                                "MyPage" -> {
+                                    val intent = Intent(context, SettingActivity::class.java)
+                                    context.startActivity(intent)
+                                }
                             }
                         },
                         icon = {
@@ -161,17 +165,15 @@ fun bottomApp() {
                         })
                 }
             }
-
         }) { innerPadding ->
+        // NavHost 내부에서 컴포저블을 렌더링합니다.
         NavHost(
             navController = navController,
             startDestination = "Home",
             Modifier.padding(innerPadding)
-
         ) {
-            composable("Home") { }
-            composable("Community") {  }
-            composable("MyPage") { }
+            composable("Home") {  }
+            // 나머지 컴포저블은 각각의 컴포저블로 대체되어야 합니다.
         }
 
     }
