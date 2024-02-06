@@ -9,7 +9,7 @@ data class posts(
     var profile_pic: Int,
     var nickname: String,
     var contents: String,
-    var likeCounts: String,
-    var chatCounts: String,
+    var likeCounts: Int,
+    var chatCounts: Int,
     var liked: Boolean = false
 ): Serializable

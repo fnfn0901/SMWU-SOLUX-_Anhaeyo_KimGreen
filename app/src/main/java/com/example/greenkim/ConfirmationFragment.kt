@@ -85,8 +85,8 @@ class ConfirmationFragment : Fragment() {
                 profile_pic = R.drawable.plastic_free,
                 nickname = "엉금",
                 contents = "ex",
-                chatCounts = "1",
-                likeCounts = "2"
+                chatCounts = 1,
+                likeCounts = 2
             )
 
             postList.add(postdata)
