@@ -1,6 +1,7 @@
 package com.example.greenkim
 
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.animation.AccelerateInterpolator
@@ -62,14 +63,16 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
                 }
             }
 
-            binding.Like.setOnClickListener {
+            // contents 부분을 클릭할 때 DetailPostActivity로 전환
+            binding.contents.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     val clickedPost = listData[position]
-                    clickedPost.liked = !clickedPost.liked
-                    animateLike(clickedPost.liked)
-                    // 변경된 부분: PostsAdapter 클래스의 updateLikeImage 함수 호출
-                    (itemView.context as? PostsAdapter)?.updateLikeImage(clickedPost.liked)
+
+                    // 여기에 DetailPostActivity를 시작하는 코드 추가
+                    val intent = Intent(itemView.context, DetailPostActivity::class.java)
+                    intent.putExtra("postId", clickedPost.no) // postId를 DetailPostActivity로 전달 (예시로 id를 전달하도록 설정)
+                    itemView.context.startActivity(intent)
                 }
             }
         }
