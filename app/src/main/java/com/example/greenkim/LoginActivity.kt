@@ -76,7 +76,7 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             loginService(id,password)
-            val intent = Intent(this, setgetActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             //finish()
         }
