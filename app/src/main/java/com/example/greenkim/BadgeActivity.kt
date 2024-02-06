@@ -50,6 +50,9 @@ class BadgeActivity : AppCompatActivity() {
 
         // 프로필 뱃지 미리 추가
         profileBadgeQueue.offer(BadgeList.ADVENTURER)
+        profileBadgeQueue.offer(BadgeList.YEONDU)
+        profileBadgeQueue.offer(BadgeList.GOLDEN_KIMGREEN)
+        profileBadgeQueue.offer(BadgeList.PLOGGING_3)
         profileBadgeQueue.offer(BadgeList.MENTEE)
 
         /// Profile Badge 설정
@@ -105,6 +108,8 @@ class BadgeActivity : AppCompatActivity() {
         if (badgeData.isProfileBadge) {
             return
         }
+
+        badgeData.isProfileBadge = true
 
         // 새로운 뱃지를 큐에 추가
         profileBadgeQueue.offer(badgeData)
