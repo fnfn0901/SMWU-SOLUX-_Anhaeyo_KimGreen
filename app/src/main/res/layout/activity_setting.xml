@@ -111,7 +111,7 @@
                     android:layout_gravity="right"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:padding="4dp"
-                    android:src="@drawable/ic_question" />
+                    android:src="@drawable/baseline_question_mark_24" />
             </FrameLayout>
 
             <LinearLayout

@@ -97,6 +97,12 @@ class SettingActivity : AppCompatActivity() {
 
         // 캘린더뷰 초기화
         initializeCalendarView()
+
+        // question_button 클릭 시 BadgeActivity로 이동
+        questionButton.setOnClickListener {
+            val intent = Intent(this@SettingActivity, BadgeActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun showImageSourceDialog() {
