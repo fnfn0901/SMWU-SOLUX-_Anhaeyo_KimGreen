@@ -40,11 +40,11 @@ class SettingActivity : AppCompatActivity() {
 
     private val badgeList by lazy {
         listOf(
-            BadgeList.ADVENTURER.apply { isEarned = true },
-            BadgeList.MENTEE.apply { isEarned = true },
-            BadgeList.PLASTIC_3.apply { isEarned = true },
-            BadgeList.GOLDEN_KIMGREEN.apply { isEarned = true },
-            BadgeList.YEONDU.apply { isEarned = true },
+            BadgeList.ADVENTURER.apply { isProfileBadge = true },
+            BadgeList.MENTEE.apply { isProfileBadge = true },
+            BadgeList.PLASTIC_3.apply { isProfileBadge = true },
+            BadgeList.GOLDEN_KIMGREEN.apply { isProfileBadge = true },
+            BadgeList.YEONDU.apply { isProfileBadge = true },
         )
     }
 
@@ -74,6 +74,12 @@ class SettingActivity : AppCompatActivity() {
         // MyPageActivity1으로 이동
         button2.setOnClickListener {
             val nextIntent = Intent(this@SettingActivity, MyPageActivity1::class.java)
+            startActivity(nextIntent)
+        }
+
+        // MyPageActivity2으로 이동
+        button3.setOnClickListener {
+            val nextIntent = Intent(this@SettingActivity, MyPageActivity2::class.java)
             startActivity(nextIntent)
         }
 

@@ -15,5 +15,10 @@ class MyPageActivity2 : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // 툴바의 뒤로가기 버튼 클릭 리스너 설정
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
     }
 }
