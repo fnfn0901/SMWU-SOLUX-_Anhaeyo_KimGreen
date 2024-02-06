@@ -96,9 +96,10 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp">
 
-                <include layout="@layout/profile_badge_recycler_view" />
+                <include layout="@layout/setting_badge"/>
 
                 <ImageView
                     android:id="@+id/question_button"

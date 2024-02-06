@@ -48,13 +48,6 @@ class BadgeActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        // 프로필 뱃지 미리 추가
-        profileBadgeQueue.offer(BadgeList.ADVENTURER)
-        profileBadgeQueue.offer(BadgeList.YEONDU)
-        profileBadgeQueue.offer(BadgeList.GOLDEN_KIMGREEN)
-        profileBadgeQueue.offer(BadgeList.PLOGGING_3)
-        profileBadgeQueue.offer(BadgeList.MENTEE)
-
         /// Profile Badge 설정
         val profileBadgeRecyclerView: RecyclerView = findViewById(R.id.profile_badge_recycler_view)
         profileBadgeRecyclerView.layoutManager = GridLayoutManager(this, 5)
@@ -84,6 +77,7 @@ class BadgeActivity : AppCompatActivity() {
             { clickedBadge: BadgeList -> showBadgePopup(clickedBadge) }
         )
         unearnedBadgeRecyclerView.adapter = unearnedAdapter
+
     }
 
     // 대표 뱃지 변경 다이얼로그 표시 함수

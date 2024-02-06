@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/badge_recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/yeondu"
+            android:layout_margin="3dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="김연두"
+            android:fontFamily="@font/lineseed_kor_rg"
+            android:textSize="10sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/golden_kimgreen"
+            android:layout_margin="3dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="황금 김그린"
+            android:fontFamily="@font/lineseed_kor_rg"
+            android:textSize="10sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/adventurer"
+            android:layout_margin="3dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/badge_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="환경 모험가"
+            android:fontFamily="@font/lineseed_kor_rg"
+            android:textSize="10sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/jamanchu"
+            android:layout_margin="3dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="자연 속에 만 보 추구"
+            android:fontFamily="@font/lineseed_kor_rg"
+            android:textSize="10sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
+
+        <ImageView
+            android:id="@+id/badge_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/earlybird"
+            android:layout_margin="3dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="얼리버드"
+            android:fontFamily="@font/lineseed_kor_rg"
+            android:textSize="10sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
