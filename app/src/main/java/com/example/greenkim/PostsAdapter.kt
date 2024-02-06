@@ -77,11 +77,13 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
             }
         }
 
-        // 변경된 부분: setPost 함수를 init 블록에 내용을 추가하여 삭제
         fun setPost(post: posts) {
             binding.nickName.text = "아기자기"
             binding.chatCounts.text = "${post.no}"
             binding.likeCounts.text = "${post.likeCounts}"
+
+            // 초기 좋아요 이미지 설정
+            updateLikeImage(post.liked)
 
             // 좋아요 버튼 클릭 이벤트 처리
             binding.Like.setOnClickListener {
@@ -91,12 +93,18 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
                 animateLike(post.liked)
                 // 좋아요 상태에 따라 이미지 변경
                 updateLikeImage(post.liked)
+                // 좋아요 상태에 따라 likeCounts 변경
+                if (post.liked) {
+                    // 좋아요가 선택된 경우
+                    post.likeCounts++
+                } else {
+                    // 좋아요가 해제된 경우에만 좋아요 수 감소
+                    post.likeCounts--
+                }
+                // likeCounts 갱신
+                binding.likeCounts.text = "${post.likeCounts}"
             }
-
-            // 초기 좋아요 이미지 설정
-            updateLikeImage(post.liked)
         }
-
         private fun updateLikeImage(liked: Boolean) {
             // 좋아요 상태에 따라 이미지 변경
             if (liked) {
