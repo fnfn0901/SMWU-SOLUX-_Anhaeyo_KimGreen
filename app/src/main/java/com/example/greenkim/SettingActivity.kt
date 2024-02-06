@@ -83,6 +83,18 @@ class SettingActivity : AppCompatActivity() {
             startActivity(nextIntent)
         }
 
+        // 로그인 페이지로 이동
+        button6.setOnClickListener {
+            val nextIntent = Intent(this@SettingActivity, LoginActivity::class.java)
+            startActivity(nextIntent)
+        }
+
+        // 탈퇴 페이지로 이동
+        button7.setOnClickListener {
+            val nextIntent = Intent(this@SettingActivity, WithdrawActivity::class.java)
+            startActivity(nextIntent)
+        }
+
         // 캘린더뷰 초기화
         initializeCalendarView()
     }
