@@ -48,6 +48,10 @@ class BadgeActivity : AppCompatActivity() {
             onBackPressed()
         }
 
+        // 프로필 뱃지 미리 추가
+        profileBadgeQueue.offer(BadgeList.ADVENTURER)
+        profileBadgeQueue.offer(BadgeList.MENTEE)
+
         /// Profile Badge 설정
         val profileBadgeRecyclerView: RecyclerView = findViewById(R.id.profile_badge_recycler_view)
         profileBadgeRecyclerView.layoutManager = GridLayoutManager(this, 5)
