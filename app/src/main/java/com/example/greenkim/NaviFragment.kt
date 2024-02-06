@@ -64,7 +64,7 @@ class NaviFragment : Fragment() {
                     val items = listOf(
                         BottomNavigationItem(
                             title = "Home",
-                            selectedIcon = Icons.Filled.Home ,
+                            selectedIcon = Icons.Filled.Home,
                             unselectedIcon = Icons.Outlined.Home,
                             hasNews = false,
                         ),
@@ -141,53 +141,10 @@ class NaviFragment : Fragment() {
                         }
 
                     }
-                    }
                 }
             }
+        }
 
         return view
-        // 레이아웃 초기화
-        //val view = inflater.inflate(R.layout.fragment_navi, container, false)
-
-        // 홈, 언어, 계정 버튼 가져오기
-        /* val homeButton: ImageButton = view.findViewById(R.id.button_home)
-     val languageButton: ImageButton = view.findViewById(R.id.button_language)*/
-
-        // 현재 액티비티 가져오기
-        /*val currentActivity = activity
-
-    // 만약 현재 액티비티가 CommunityActivity이면 언어 버튼 색상 업데이트
-    if (currentActivity is CommunityActivity) {
-        currentActivity.updateLanguageButtonColor(languageButton)
-    }*/
-
-        // 홈 버튼 클릭 이벤트 처리
-        /*homeButton.setOnClickListener {
-        val intent = Intent(activity, MainActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
-        startActivity(intent)
-        activity?.overridePendingTransition(0, 0)
     }
-
-    // 언어 버튼 클릭 이벤트 처리
-    languageButton.setOnClickListener {
-        val intent = Intent(activity, CommunityActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
-        startActivity(intent)
-        activity?.overridePendingTransition(0, 0)
-    }*/
-
-
-    }
-
-/*override fun onResume() {
-    super.onResume()
-
-    if (::languageButton.isInitialized) {
-        val currentActivity = activity
-        if (currentActivity is CommunityActivity) {
-            currentActivity.updateLanguageButtonColor(languageButton)
-        }
-    }
-}*/
 }

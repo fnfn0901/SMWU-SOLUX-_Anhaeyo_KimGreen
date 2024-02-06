@@ -1,11 +1,12 @@
 package com.example.greenkim.api.member.DTO.profile
 
+import com.example.greenkim.api.member.DTO.MemberData
 import com.google.gson.annotations.SerializedName
 
 data class AllSettingResponseDto (
-    @SerializedName("status")val status:Int,
+    @SerializedName("code")val status:Int,
     @SerializedName("success")val success:Boolean,
-    @SerializedName("message")val message:String,
-    @SerializedName("data") val data: Data
+    @SerializedName("msg")val message:String,
+    @SerializedName("data") val data: MemberData
 )
 

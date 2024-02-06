@@ -77,9 +77,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
-        <include layout="@layout/fragment_navi"/>
+<!--        <include layout="@layout/fragment_navi"/>-->
+
 
     </FrameLayout>
-
 
 </LinearLayout>
