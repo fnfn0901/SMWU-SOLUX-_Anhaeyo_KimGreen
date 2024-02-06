@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.Navigation
 import com.example.greenkim.databinding.FragmentNaviBinding
 
 class NaviFragment : Fragment() {
@@ -24,9 +24,7 @@ class NaviFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        // NavController 초기화
-        navController = findNavController()
+        navController = Navigation.findNavController(view)
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
