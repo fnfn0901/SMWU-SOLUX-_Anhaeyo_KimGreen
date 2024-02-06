@@ -60,11 +60,7 @@
                     android:textSize="15sp" />
 
                 <!-- 프로필 뱃지 삽입 -->
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/profile_badge_recycler_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" />
+                <include layout="@layout/profile_badge_recycler_view" />
 
             </LinearLayout>
 
