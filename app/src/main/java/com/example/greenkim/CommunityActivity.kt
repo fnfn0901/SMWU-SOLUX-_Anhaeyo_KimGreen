@@ -1,10 +1,7 @@
 package com.example.greenkim
 
-import android.graphics.Color
 import android.os.Bundle
-import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentTransaction
 import com.example.greenkim.databinding.ActivityCommunityBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -36,12 +33,5 @@ class CommunityActivity : AppCompatActivity() {
                 "ProofFragment" -> binding.viewPager.currentItem = 2
             }
         }
-    }
-
-    fun updateLanguageButtonColor(languageButton: ImageButton) {
-        languageButton.setColorFilter(
-            Color.parseColor("#288156"),
-            android.graphics.PorterDuff.Mode.SRC_IN
-        )
     }
 }

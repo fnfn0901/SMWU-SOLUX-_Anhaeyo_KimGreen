@@ -6,22 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.greenkim.databinding.FragmentCommunityBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CommunityFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 
 class CommunityFragment : Fragment() {
 
@@ -38,11 +28,6 @@ class CommunityFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-        /*val data: MutableList<posts> = loadData()
-        var adapter_post = PostsAdapter()
-        adapter_post.listData = data
-
-        binding.recyclerView.adpter = adapter_post*/
     }
 
     override fun onCreateView(
@@ -100,29 +85,4 @@ class CommunityFragment : Fragment() {
         }
         return postList
     }
-
-
-    /*fun loadData(): MutableList<posts> {
-        val data: MutableList<posts> = mutableListOf()
-
-        for (no in 1..10) {
-            val title = "example {$no}"
-            val date = System.currentTimeMillis()
-
-            var post = posts(
-                no,
-                title,
-                date,
-                contents = "this is Example",
-                nickname = "엉금엉금",
-                chatCounts = "3",
-                likeCounts = "2",
-                profile_pic = R.drawable.frog
-            )
-
-            data.add(post)
-
-        }
-        return data
-    }*/
 }

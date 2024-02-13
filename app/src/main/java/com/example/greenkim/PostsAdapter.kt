@@ -47,16 +47,12 @@ class PostsAdapter(private val context: Context) : RecyclerView.Adapter<PostsAda
     }
 
     private fun findPostPosition(): Int {
-        // 이 부분은 해당 post의 position을 찾아주는 로직을 추가해야 합니다.
-        // 예를 들어, post의 ID나 다른 고유한 값으로 position을 찾을 수 있습니다.
-        // 임시로 첫 번째 post의 position을 반환하도록 설정하였습니다.
         return if (listData.isNotEmpty()) 0 else RecyclerView.NO_POSITION
     }
 
     inner class PostViewHolder(private val binding: RecyclerviewItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        // 변경된 부분: setPost 함수 대신 init 블록에 직접 내용을 추가
         init {
             binding.root.setOnClickListener {
                 val position = adapterPosition
@@ -71,10 +67,8 @@ class PostsAdapter(private val context: Context) : RecyclerView.Adapter<PostsAda
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     val clickedPost = listData[position]
-
-                    // 여기에 DetailPostActivity를 시작하는 코드 추가
                     val intent = Intent(itemView.context, DetailPostActivity::class.java)
-                    intent.putExtra("postId", clickedPost.no) // postId를 DetailPostActivity로 전달 (예시로 id를 전달하도록 설정)
+                    intent.putExtra("postId", clickedPost.no)
                     itemView.context.startActivity(intent)
                 }
             }
