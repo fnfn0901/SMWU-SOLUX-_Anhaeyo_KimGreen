@@ -34,7 +34,7 @@ https://github.com/fnfn0901/kimgreen-Frontend/assets/89966409/38de4145-9909-4943
     - 로그인
     - 회원가입
     - 프로필 뱃지
-    - 내비게이션 바
+    - 내비게이션 바 
 - 뱃지 디자인 제작(Figma)
 
 
