@@ -19,6 +19,7 @@ https://github.com/fnfn0901/kimgreen-Frontend/assets/89966409/38de4145-9909-4943
 
 ## 사용 스택
 <img width="722" alt="301080108-d9a25eaa-a078-4a7d-96b6-8e7c50941d10" src="https://github.com/fnfn0901/kimgreen-Frontend/assets/89966409/e30b37d8-2e6a-4b5c-a484-e11984b1e743">
+
 - 안드로이드
     - Retrofit2
     - Jetpack Compose
