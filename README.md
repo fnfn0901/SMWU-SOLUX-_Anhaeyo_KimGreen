@@ -20,9 +20,11 @@ https://github.com/fnfn0901/kimgreen-Frontend/assets/89966409/38de4145-9909-4943
 ## 사용 스택
 <img width="722" alt="301080108-d9a25eaa-a078-4a7d-96b6-8e7c50941d10" src="https://github.com/fnfn0901/kimgreen-Frontend/assets/89966409/9eed39e0-3913-45f5-8319-048b8cbb41f6">
 - 안드로이드
-    - Retrofit2   Jetpack Compose
+    - Retrofit2
+    - Jetpack Compose
 - 협업
-    - GitHub      Figma
+    - GitHub
+    - Figma
 
 
 ## 맡은 역할
